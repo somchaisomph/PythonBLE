@@ -1,6 +1,4 @@
 """
-bluetooth.py
-============
 
 Python wrapper for gatttool, to allow programmatic control of Bluetooth LE
 devices from within Python.
