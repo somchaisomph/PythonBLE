@@ -87,7 +87,7 @@ class BLEDevice():
 
 
 def callback(val):
-	print(val)
+	#print(val)
 	t,h,m,p= val.decode('utf-8').split(";")
 	print(f'TempC : {t} C')	
 	print(f'Humidity : {h} %')	
@@ -95,8 +95,8 @@ def callback(val):
 	print("----------")
 
 if __name__ == "__main__":
-	grass = "28:CD:C1:06:A7:C2"
-	vetgy = "28:CD:C1:06:A6:EB"
+	grass = "28:CD:xx:xx:xx:xx"
+	vetgy = "28:CD:xx:xx:xx:xx"
 	ble = BLEDevice()
 	ble.start()
 	ble.connect(vetgy)
