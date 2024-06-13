@@ -1,3 +1,6 @@
+import time
+from pyBLE import *
+
 def callback(val):
 	#print(val)
 	t,h,m,p= val.decode('utf-8').split(";")
@@ -14,9 +17,9 @@ if __name__ == "__main__":
 	ble.connect(vetgy)
 	if ble.isConected():
 		ble.readHnd(9,callback)
-		ble.writeHnd(int('c',16),'P1')
+		ble.writeHnd(int('c',16),'command-1')
 		time.sleep(5)
-		ble.writeHnd(int('c',16),'P0')
+		ble.writeHnd(int('c',16),'command-2')
 		time.sleep(2)
 		ble.readHnd(9,callback)
 		time.sleep(2)
